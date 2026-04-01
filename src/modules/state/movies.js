@@ -1,0 +1,58 @@
+export const movies = [
+  {
+    id: 1,
+    title: "Dune: Part Two",
+    year: 2024,
+    genre: "Action",
+    poster: "https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg",
+  },
+  {
+    id: 2,
+    title: "Oppenheimer",
+    year: 2023,
+    genre: "Drama",
+    poster: "https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg",
+  },
+  {
+    id: 3,
+    title: "Avatar: The Way of Water",
+    year: 2022,
+    genre: "Sci-Fi",
+    poster: "https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+  },
+  {
+    id: 4,
+    title: "1917",
+    year: 2019,
+    genre: "War",
+    poster: "https://image.tmdb.org/t/p/w500/iZf0KyrE25z1sage4SYFLCCrMi9.jpg",
+  },
+  {
+    id: 5,
+    title: "John Wick 4",
+    year: 2023,
+    genre: "Action",
+    poster: "https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+  },
+  {
+    id: 6,
+    title: "Barbie",
+    year: 2023,
+    genre: "Drama",
+    poster: "https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+  },
+  {
+    id: 7,
+    title: "The Conjuring",
+    year: 2013,
+    genre: "Horror",
+    poster: "https://image.tmdb.org/t/p/w500/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+  },
+  {
+    id: 8,
+    title: "La La Land",
+    year: 2016,
+    genre: "Romance",
+    poster: "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+  },
+];
