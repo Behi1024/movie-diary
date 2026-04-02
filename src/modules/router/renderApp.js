@@ -7,12 +7,25 @@ import {
   renderJournalPage,
   attachJournalEvents,
 } from "../../pages/journal/renderJournalPage.js";
+import { loadFromStorage } from "../storage/storage.js";
 
-export function renderApp() {
+let isStorageLoaded = false;
+
+export async function renderApp() {
   const app = document.querySelector("#app");
 
+  if (!isStorageLoaded) {
+    const savedData = loadFromStorage();
+
+    if (savedData) {
+      appState.favourites = savedData;
+    }
+
+    isStorageLoaded = true;
+  }
+
   if (appState.currentPage === "home") {
-    app.innerHTML = renderHomePage();
+    app.innerHTML = await renderHomePage();
     attachNavigationEvents();
     attachHomeEvents();
     return;
@@ -30,18 +43,18 @@ function attachNavigationEvents() {
   const journalLink = document.querySelector(".header__link--journal");
 
   if (homeLink) {
-    homeLink.addEventListener("click", (event) => {
+    homeLink.addEventListener("click", async (event) => {
       event.preventDefault();
       appState.currentPage = "home";
-      renderApp();
+      await renderApp();
     });
   }
 
   if (journalLink) {
-    journalLink.addEventListener("click", (event) => {
+    journalLink.addEventListener("click", async (event) => {
       event.preventDefault();
       appState.currentPage = "journal";
-      renderApp();
+      await renderApp();
     });
   }
 }
